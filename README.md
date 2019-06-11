@@ -127,11 +127,8 @@ open class BaseNetwork {
 }
 ```
 
-参考：https://juejin.im/post/5ceddb14f265da1bcb4f0db6
-
-     https://blog.csdn.net/guolin_blog/article/details/87900605
-
-     https://developer.android.com/topic/libraries/architecture/livedata
+参考：https://juejin.im/post/5ceddb14f265da1bcb4f0db6,https://blog.csdn.net/guolin_blog/article/details/87900605
+,https://developer.android.com/topic/libraries/architecture/livedata
 
 
 
