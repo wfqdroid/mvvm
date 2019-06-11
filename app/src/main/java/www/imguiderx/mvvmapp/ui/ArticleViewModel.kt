@@ -14,5 +14,4 @@ class ArticleViewModel(private val respository: ArticleRepository) : BaseViewMod
 
         }, data)
     }
-
 }

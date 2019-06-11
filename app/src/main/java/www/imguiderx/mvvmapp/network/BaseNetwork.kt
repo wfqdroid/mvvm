@@ -27,18 +27,15 @@ open class BaseNetwork {
                         val body = response.body()
                         if (body != null) {
                             body as BaseRes<T>
-                            if (body.code == 0)
+                            if (body.errorCode == 0)
                                 it.resume(body)
-                            else if(body.code == 100){
-                                // 重新登录 记住：和回到首页是不一样的
-                                // 重新登录，删除所有Activity栈里面的Activity,然后跳转到登录页面
+                            else if(body.errorCode == 100){
+                                // 比方说登录超时等
 
                             }else{
-
-                                it.resumeWithException(RuntimeException(body.message))
+                                it.resumeWithException(RuntimeException(body.errorMsg))
                             }
                         } else {
-                            loge("响应体是空的")
                             it.resumeWithException(RuntimeException("response body is null"))
                         }
                     } else {
